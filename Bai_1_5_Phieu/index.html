@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phiếu đăng ký</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header img {
+            height: 60px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        hr {
+            border: 1px solid red;
+            width: 60%;
+            margin: 10px auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .small-input {
+            width: 60px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 6px 15px;
+            margin: 5px;
+        }
+
+        .logo-left img {
+            height: 60px;
+        }
+
+        .logo-right img {
+            height: 50px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-left">
+            <img src="Images/lachong.gif">
+        </div>
+
+        <div class="logo-right">
+            <img src="Images/Flash.gif">
+            <img src="Images/dreamweaver.gif">
+            <img src="Images/adobe.gif">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Title -->
+    <div class="title">PHIẾU ĐĂNG KÝ</div>
+
+    <!-- Form -->
+    <form>
+        <table>
+            <tr>
+                <td>Họ và tên:</td>
+                <td><input type="text"> (*)</td>
+            </tr>
+
+            <tr>
+                <td>Địa chỉ:</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email"> (*)</td>
+            </tr>
+
+            <tr>
+                <td>Giới tính:</td>
+                <td>
+                    <input type="radio" name="gender"> Nam
+                    <input type="radio" name="gender"> Nữ
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tuổi:</td>
+                <td><input type="text" class="small-input"> (*)</td>
+            </tr>
+
+            <tr>
+                <td>Sở thích:</td>
+                <td>
+                    <input type="checkbox"> Thể thao<br>
+                    <input type="checkbox"> Văn học<br>
+                    <input type="checkbox"> Công nghệ thông tin<br>
+                    <input type="checkbox"> Lịch sử<br>
+                    <input type="checkbox"> Game
+                </td>
+            </tr>
+
+            <tr>
+                <td>Chuyên ngành:</td>
+                <td>
+                    <select>
+                        <option>Công nghệ Web</option>
+                        <option>Thiết kế đồ họa</option>
+                        <option>Lập trình</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gửi hình:</td>
+                <td><input type="file"></td>
+            </tr>
+
+            <tr>
+                <td>Yêu cầu:</td>
+                <td><textarea rows="4"></textarea></td>
+            </tr>
+        </table>
+
+        <div class="buttons">
+            <button type="submit">Gởi thông tin</button>
+            <button type="reset">Nhập lại</button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
