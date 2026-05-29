@@ -1,0 +1,68 @@
+/* CSS Document */
+
+body {
+margin:0px 0px 0px 0px;
+}
+
+.nen {
+background-image:url("IMAGES/chuyensac.jpg");
+background-repeat:repeat-y;
+background-position:right;
+}
+.nenmenu{
+    background-image: url("IMAGES/nen_thucdon.jpg");
+    background-repeat: repeat-x;
+    color: #fff;
+    font-size: 14px;
+	
+	
+}
+.tieude {
+font-family:tahoma;
+font-size:40px;
+color:#FF6600;
+font-weight:bold;
+padding-left:15px;
+}
+
+.noidung {
+    font-family: tahoma;
+    font-size: 14px;
+    color: #000066;
+    padding-left: 15px;
+	background-image: url("IMAGES/sua.gif");
+}
+.anh_sua{
+    width:180px;
+    height:120px;
+    float:left;
+    margin-right:15px;
+    border:1px solid gray;
+    box-shadow:3px 3px 5px gray;}
+a {
+	font-family: tahoma;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #0000FF;
+}
+/*cho bảng tham gia*/
+.khungform{
+    width:500px;
+    background:#B6F0A9;
+    padding:10px;
+    margin-left:15px;
+    font-family:tahoma;
+    font-size:14px;
+    color:#000066;
+}
+
+.khungform input,
+.khungform select{
+    margin-top:5px;
+    margin-bottom:5px;
+}
