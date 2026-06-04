@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.header {
+  border-bottom: 8px solid #359833;
+  padding-top: 14px;
+}
+
+.header__logo {
+  display: inline-block;
+}
+
+.header__img {
+  position: relative;
+  top: 26px;
+}
+
+.header__nav {
+  float: right;
+  text-align: right;
+}
+
+.nav {
+  margin-top: 40px;
+  display: flex;          /* Chuyển menu sang dạng Flexbox */
+  justify-content: flex-end; /* Đẩy toàn bộ menu về bên phải cho đúng layout gốc */
+  list-style: none;
+  padding: 0;
+}
+
+.nav__item {
+  display: flex;          /* Kích hoạt flex để đưa ảnh và dấu | nằm thẳng hàng ngang */
+  align-items: center;    /* Căn giữa ảnh và dấu | theo chiều dọc */
+  padding: 0;             /* Xóa padding cũ để các mục xích sát lại nhau */
+}
+
+/* Tự động thêm dấu | ở giữa các mục, trừ mục cuối cùng */
+.nav__item:not(:last-child)::after {
+  content: "|";
+  margin: 0 6px;          /* Khoảng cách 2 bên dấu |, chỉnh nhỏ xuống 4px nếu muốn sát nữa */
+  color: #359833;         /* Màu xanh lá đồng bộ với đường kẻ header của bạn */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav__link {
+  color: #62ad5b;
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 6px;
+  border-top: 2px solid #9ccc9c;
+  height: 80vh;
+}
+
+.content__background {
+  width: 19%;
+  height: 100%;
+  background-color: #9ccc9c;
+  border-right: 4px solid #39653a;
+  float: left;
+}
+
+.content__img-left {
+  width: 100%;
+}
+
+.content__img-bottom {
+  margin-top: 52%;
+}
+
+.content__main {
+  width: 60%;
+  float: left;
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.square--first {
+  background-color: #365a34;
+  margin-top: 40px;
+}
+
+.square--second {
+  background-color: #378039;
+  margin-top: 70px;
+}
+
+.square--third {
+  background-color: #69b163;
+  margin-top: 100px;
+}
+
+.content__butterfly-left {
+  position: absolute;
+  left: 0;
+  top: 24%;
+}
+
+.content__write {
+  margin-left: 88px;
+}
+
+.content__text-img {
+}
+
+.content__heading {
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.content__text {
+}
+
+.content__img-buom4 {
+  float: right;
+}
+
+.content__form {
+  width: 20%;
+  float: left;
+}
+
+.form {
+  text-align: center;
+  background-color: #9ccc9c;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.form__heading {
+  background-color: #5d8b5d;
+  color: #fff;
+  padding: 10px 0;
+  border-bottom: 2px solid #000;
+}
+
+.form__text {
+  font-size: 17px;
+  margin-bottom: 2px;
+}
+
+.form__text--border {
+  border-top: 10px solid #ccc;
+}
+
+.form__control {
+  width: 80%;
+}
+
+.btn {
+  display: block;
+  margin: 10px auto;
+  padding: 4px 12px;
+  border-radius: 14px;
+  color: #fff;
+  background-color: #6f9d6e;
+  width: 90px;
+}
+
+.form__reset-id {
+  padding: 6px 0;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #70a073;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.form__background {
+  background-image: url(./images/h2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  height: 500px;
+  width: 100%;
+  border-left: 6px dotted #359831;
+  padding: 30px 10px 0;
+  background-origin: content-box;
+}
+```css
+.nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item:not(:last-child)::after {
+  content: "|";
+  margin: 0 8px; 
+  color: #007d32;
+  font-weight: bold;
+}
