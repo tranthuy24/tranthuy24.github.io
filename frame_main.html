@@ -4,28 +4,26 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 <style type="text/css">
-body,td,th {
+body, td, th {
     color: #000000;
-    font-size: 36px;
+    font-size: 24px;
+    text-align: center;
 }
 body {
-	background-color: #FFFFFF;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
-	/* ẩn thanh cuộn cho Chrome, Safari, Edge và Opera */
-        html::-webkit-scrollbar, 
-        body::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Dành cho Firefox */
-        html, body {
-            scrollbar-width: none;
-        }
-
-        /* Dành cho Internet Explorer cũ */
-        html, body {
-            -ms-overflow-style: none;
-        }
+/* Ẩn hoàn toàn thanh cuộn thô cứng */
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+    display: none;
+}
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
 </style>
 </head>
 
@@ -34,23 +32,27 @@ body {
 
 <style>
 @keyframes gradient-text {
-  0% { color: #ff0055; }   /* Màu bắt đầu (Hồng cánh sen) */
-  33% { color: #0088ff; }  /* Màu tiếp theo (Xanh dương) */
-  66% { color: #00ffaa; }  /* Màu tiếp theo (Xanh ngọc) */
-  100% { color: #ff0055; } /* Quay về màu đầu tiên */
+  0% { color: #ff0055; }
+  33% { color: #0088ff; }
+  66% { color: #00ffaa; }
+  100% { color: #ff0055; }
 }
-
 .doi-mau {
-  font-size: 24px; /* Bạn có thể chỉnh cỡ chữ to nhỏ ở đây */
-  text-align: center; /* Căn giữa chữ giống trong ảnh */
-  animation: gradient-text 4s infinite linear; /* 4s là tốc độ chuyển màu */
+  font-size: 42px;
+  text-align: center; 
+  animation: gradient-text 4s infinite linear; 
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 </style>
-<table width="694" height="450" border="0">
+
+<table width="100%" height="450" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="688" height="446" align="right" valign="middle"><img src="image/alime.gif" width="206" height="199" longdesc="image/alime.gif"></td>
+    <td align="center" valign="middle">
+        <img src="image/alime.gif" width="206" height="199" alt="Welcome GIF">
+    </td>
   </tr>
 </table>
-<p>&nbsp;</p>
+
 </body>
 </html>
