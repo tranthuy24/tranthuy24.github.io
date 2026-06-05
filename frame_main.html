@@ -15,8 +15,22 @@ body {
 </head>
 
 <body>
-<p><strong><em>CHÀO MỪNG ĐẾN VỚI WEBSITE !!
-</em></strong></p>
+<p class="doi-mau"><strong><em>CHÀO MỪNG ĐẾN VỚI WEBSITE !!</em></strong></p>
+
+<style>
+@keyframes gradient-text {
+  0% { color: #ff0055; }   /* Màu bắt đầu (Hồng cánh sen) */
+  33% { color: #0088ff; }  /* Màu tiếp theo (Xanh dương) */
+  66% { color: #00ffaa; }  /* Màu tiếp theo (Xanh ngọc) */
+  100% { color: #ff0055; } /* Quay về màu đầu tiên */
+}
+
+.doi-mau {
+  font-size: 24px; /* Bạn có thể chỉnh cỡ chữ to nhỏ ở đây */
+  text-align: center; /* Căn giữa chữ giống trong ảnh */
+  animation: gradient-text 4s infinite linear; /* 4s là tốc độ chuyển màu */
+}
+</style>
 <table width="505" height="378" border="0">
   <tr>
     <td width="594" height="374" align="center" valign="middle"><img src="image/alime.gif" width="206" height="199" longdesc="image/alime.gif"></td>
