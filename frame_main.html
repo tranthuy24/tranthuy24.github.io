@@ -3,56 +3,92 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+
 <style type="text/css">
+
 body, td, th {
     color: #000000;
     font-size: 24px;
     text-align: center;
 }
+
 body {
-    background-color: #FFFFFF;
+    background-color: #DFF5FF;
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
-/* Ẩn hoàn toàn thanh cuộn thô cứng */
-html::-webkit-scrollbar, 
+
+/* Ẩn thanh cuộn */
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
 }
+
 html, body {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+
+/* ===== KHUNG CHÍNH ===== */
+.khung-main{
+    width: 75%;
+    margin: 20px auto;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.92);
+
+    border: 4px dashed #66CCFF;
+    border-radius: 35px;
+
+    box-shadow:
+        0 0 20px rgba(0,153,255,0.2),
+        inset 0 0 10px rgba(174,235,255,0.2);
+}
+
+
+@keyframes gradient-text {
+    0% { color: #ff0055; }
+    33% { color: #0088ff; }
+    66% { color: #00ffaa; }
+    100% { color: #ff0055; }
+}
+
+.doi-mau {
+    font-size: 42px;
+    text-align: center;
+    animation: gradient-text 4s infinite linear;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* GIF */
+.welcome-gif img{
+    border-radius: 20px;
+    border: 3px solid #99DDFF;
+    box-shadow: 0 0 15px rgba(0,153,255,0.25);
+}
+
 </style>
 </head>
 
 <body>
-<p class="doi-mau"><strong><em>CHÀO MỪNG ĐẾN VỚI WEBSITE !!</em></strong></p>
 
-<style>
-@keyframes gradient-text {
-  0% { color: #ff0055; }
-  33% { color: #0088ff; }
-  66% { color: #00ffaa; }
-  100% { color: #ff0055; }
-}
-.doi-mau {
-  font-size: 42px;
-  text-align: center; 
-  animation: gradient-text 4s infinite linear; 
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-</style>
+<div class="khung-main">
 
-<table width="100%" height="450" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="center" valign="middle">
-        <img src="image/alime.gif" width="206" height="199" alt="Welcome GIF">
-    </td>
-  </tr>
-</table>
+    <p class="doi-mau">
+        <strong><em>
+            CHÀO MỪNG ĐẾN VỚI WEBSITE !!
+        </em></strong>
+    </p>
+
+   
+        <img src="image/alime.gif"
+             width="206"
+             height="199"
+             alt="Welcome GIF">
+
+</div>
 
 </body>
 </html>
