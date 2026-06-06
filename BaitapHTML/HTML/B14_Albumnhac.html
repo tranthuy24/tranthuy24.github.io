@@ -1,27 +1,174 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>Album Nhạc</title>
+
 <style type="text/css">
+
 body {
-	background-image: url(../images/cho.jpg);
+    background-image: url(../images/cho.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
 }
+
+.khung-nhac{
+    width: 520px;
+    margin: auto;
+
+    background: rgba(255,255,255,0.88);
+
+    border: 4px dashed #66CCFF;
+    border-radius: 25px;
+
+    padding: 20px;
+
+    box-shadow: 0 0 20px rgba(0,153,255,0.3);
+}
+
+.chay{
+    text-align: center;
+    font-size: 34px;
+    color: #0077CC;
+    font-family: Georgia, serif;
+    font-weight: bold;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #99DDFF;
+}
+
+
+details{
+    margin-bottom: 20px;
+}
+
+
+summary{
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+
+    background: #DFF5FF;
+    border-left: 5px solid #66CCFF;
+    border-radius: 15px;
+
+    padding: 15px;
+    color: #4B0082;
+
+    transition: 0.3s;
+
+   
+    list-style: none;
+}
+
+summary:hover{
+    background: #C9EEFF;
+}
+
+
+summary::-webkit-details-marker{
+    display: none;
+}
+
+summary::marker{
+    display: none;
+}
+
+summary::before{
+    content: "▶ ";
+    color: #0099FF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+details[open] summary::before{
+    content: "▼ ";
+}
+
+audio{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
 </style>
 </head>
 
 <body>
-<h2><div class="chay">Nhạc Online</div></h2>
 
-    <ol>
-      <li>
-      <a href="../Sounds/Cogibuoncuoi.mp3" target="_blank">Có Gì Buồn Cười</a><br> </li>
-        <li><a href="../Sounds/vohanthanh.mp3" target="_blank">Nơi Ta Chia Làm Hai</a><br> </li>
-      <li> <a href="../Sounds/domixi.mp3" target="_blank">Cảm Ơn Anh</a> </li>
+<div class="khung-nhac">
+
+    <h2 class="chay">🎵 NHẠC ONLINE 🎵</h2>
+
+   
+    <details ontoggle="playMusic(this)">
+        <summary>🎵 Có Gì Buồn Cười</summary>
+
+        <audio controls>
+            <source src="../Sounds/Cogibuoncuoi.mp3" type="audio/mp3">
+        </audio>
+    </details>
+
+    
+    <details ontoggle="playMusic(this)">
+        <summary>🎵 Nơi Ta Chia Làm Hai</summary>
+
+        <audio controls>
+            <source src="../Sounds/vohanthanh.mp3" type="audio/mp3">
+        </audio>
+    </details>
+
+   
+    <details ontoggle="playMusic(this)">
+        <summary>🎵 Cảm Ơn Anh</summary>
+
+        <audio controls>
+            <source src="../Sounds/domixi.mp3" type="audio/mp3">
+        </audio>
+    </details>
+
+</div>
+
+<script>
+
+function playMusic(current){
+
+    let currentAudio = current.querySelector("audio");
+
+    if(current.open){
+
+        // Tắt bài khác
+        document.querySelectorAll("details").forEach(item => {
+
+            if(item !== current){
+
+                item.open = false;
+
+                let audio = item.querySelector("audio");
+
+                audio.pause();
+                audio.currentTime = 0;
+            }
+
+        });
         
-        </div>
+        currentAudio.play();
+
+    } 
+    else {
+
         
-      </li>
-</ol>
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+}
+
+</script>
+
 </body>
 </html>
