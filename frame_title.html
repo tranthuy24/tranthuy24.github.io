@@ -19,6 +19,40 @@ body, td, th {
     padding: 8px;
     box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
 }
+	/* Chữ phát sáng */
+.text-title{
+    font-size: 36px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    color: #0066CC;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #99ddff,
+        0 0 15px #66ccff,
+        0 0 20px #33bbff;
+
+    animation: glow 2s infinite alternate;
+}
+	/* Hiệu ứng sáng nhẹ */
+@keyframes glow{
+    from{
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #99ddff,
+            0 0 15px #66ccff;
+    }
+
+    to{
+        text-shadow:
+            0 0 10px #ffffff,
+            0 0 20px #66ccff,
+            0 0 30px #00aaff,
+            0 0 40px #00aaff;
+    }
+}
 </style>
 </head>
 
