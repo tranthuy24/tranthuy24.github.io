@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Con tem có từ khi nào?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+   
+    <div class="ben-trai">
+
+      
+        <img
+            src="IMAGES/tem.jpg"
+            alt=""
+            class="anh-tem-nen"
+        >
+
+     
+      <div class="soc-ngang"></div>
+
+       
+        <img
+            src="IMAGES/mmau1.gif"
+            alt=""
+            class="mau-doc"
+        >
+
+     
+        <div class="danh-sach-tem">
+            <img src="IMAGES/tem1a.jpg" alt="Tem khoa học" class="hov-tem">
+            <img src="IMAGES/tem1b.jpg" alt="Tem cầu" class="hov-tem">
+            <img src="IMAGES/tem1d.jpg" alt="Tem nghệ thuật" class="hov-tem">
+            <img src="IMAGES/tem1e.jpg" alt="Tem hoa" class="hov-tem">
+        </div>
+
+       
+        <img
+            src="IMAGES/tem1f.gif"
+            alt="Tem nghiêng"
+            class="tem-nghieng hov-tem"
+        >
+
+     
+        <div class="gach-xanh-duoi"></div>
+
+        <!-- Menu -->
+        <nav class="menu-footer">
+            <a href="#">TRANG CHỦ</a>
+            <span>|</span>
+            <a href="#">SƯU TẬP</a>
+            <span>|</span>
+            <a href="#">CLB</a>
+        </nav>
+
+  </div>
+
+  
+    <div class="ben-phai">
+
+        <div class="tieu-de-anh">
+            <img
+                src="IMAGES/lich_su.jpg"
+                alt="Con tem có từ khi nào?"
+            >
+        </div>
+
+       
+        <div class="noi-dung">
+            Năm 1838, Ông Rowland Hill,<br>
+            giám đốc Bưu điện Anh quốc đã đệ trình<br>
+            Quốc hội Anh đề án phát hành tem<br>
+            dán lên phong bì để giải quyết vấn đề thu<br>
+            cước phí. Đầu năm 1840,<br>
+            đề án này được thông qua và ngày 6/5/1840,<br>
+            con tem đầu tiên in hình nữ hoàng<br>
+            Victoria, giá “1 penny” ra đời.
+        </div>
+
+        
+        <div class="con-dau">
+            <img
+                src="IMAGES/condau1.gif"
+                alt="Hội nghị cấp cao tem thư"
+            >
+        </div>
+
+       
+        <div class="dong-nhom">
+            <span>NHÓM</span>
+            <b>.</b>
+            <span>MULTIMEDIA</span>
+            <b>.</b>
+            <span>SƯU</span>
+            <b>.</b>
+            <span>TẬP</span>
+        </div>
+
+    </div>
+
+   
+    <img
+        src="IMAGES/ngay2.gif"
+        alt="Tem ngày"
+        class="tem-ngay"
+    >
+
+</div>
+
+
+<div id="stamp-tooltip">Tem đang được bán</div>
+
+
+<script>
+    const tems = document.querySelectorAll('.hov-tem');
+    const tooltip = document.getElementById('stamp-tooltip');
+
+    tems.forEach(tem => {
+       
+        tem.addEventListener('mouseenter', (e) => {
+            tooltip.style.display = 'block';
+        });
+
+        
+        tem.addEventListener('mousemove', (e) => {
+           
+            tooltip.style.left = (e.pageX + 12) + 'px';
+            tooltip.style.top = (e.pageY + 12) + 'px';
+        });
+
+       
+        tem.addEventListener('mouseleave', () => {
+            tooltip.style.display = 'none';
+        });
+    });
+</script>
+
+</body>
+</html>
