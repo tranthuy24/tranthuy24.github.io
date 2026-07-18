@@ -5,12 +5,14 @@
     <title>Thông Tin Liên Hệ</title>
     <style>
         body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e0f2fe;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f2fe;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
         .contact-card {
@@ -21,6 +23,8 @@
             padding: 30px;
             width: 450px;
             text-align: center;
+          
+            margin: auto; 
         }
 
         .contact-card h3 {
@@ -33,7 +37,7 @@
         .contact-card hr {
             border: 0;
             height: 1px;
-            background-color: #e0f2fe; /* Đường gạch ngang màu xanh sky nhạt */
+            background-color: #e0f2fe;
             margin-bottom: 20px;
         }
 
@@ -49,15 +53,12 @@
             color: #1a202c;
             margin-bottom: 5px;
         }
-    body,td,th {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
     </style>
 </head>
 <body>
 
 <div class="contact-card">
-  <script>
+    <script>
         document.writeln("<h3>Mọi chi tiết xin vui lòng liên hệ</h3>");
         document.writeln("<hr />");
         document.writeln("<div class='contact-info'>");
