@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bật tắt đèn</title>
+    <style>
+        body { 
+            font-family: "Times New Roman", serif; 
+            text-align: center; 
+            margin-top: 50px; 
+            background: #000; 
+        }
+        
+        .box { display: inline-block; font-size: 0; }
+        
+        .btn-3d {
+            width: 50%;
+            background: #f0f0f0;
+            border: 2px solid;
+            border-color: #fff #808080 #808080 #fff;
+            padding: 8px 0;
+            font: 16px "Times New Roman", serif;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        
+        .btn-3d:active { border-color: #808080 #fff #fff #808080; }
+        
+        img { display: block; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <input type="button" class="btn-3d" value="Tắt" onclick="document.getElementById('img').src='images/den_tat.jpg'" />
+    <input type="button" class="btn-3d" value="Mở" onclick="document.getElementById('img').src='images/den_sang.jpg'" />
+    <img src="images/den_tat.jpg" id="img" />
+</div>
+
+</body>
+</html>

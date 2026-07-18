@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chào theo thời gian</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background: #e0f2fe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .cute-box {
+            background: #ffffff; 
+            border: 4px dashed #7dd3fc;
+            border-radius: 20px;
+            padding: 25px;
+            width: 250px;
+            text-align: center;
+        }
+        .text-chao {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0369a1;
+            margin-bottom: 15px; 
+        }
+        .cute-box img {
+            width: 100px; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cute-box">
+
+    <div class="text-chao">
+        <script>
+            var d = new Date();
+            var time = d.getHours();
+
+            if (time < 10) {
+                document.write("🌅 Chào buổi sáng!");
+            } else if (time < 17) {
+                document.write("☀️ Chào buổi chiều!");
+            } else {
+                document.write("🌙 Chào buổi tối!");
+            }
+        </script>
+    </div>
+   
+    <img src="meovang.gif" alt="Mèo vàng cute">
+</div>
+
+</body>
+</html>

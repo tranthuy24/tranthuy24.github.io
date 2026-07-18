@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Bài 2. Phép toán cơ bản</title>
+    <style>
+        body {
+            
+            font-family: "Times New Roman", Times, serif;
+            background-color: #e0f2fe; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .math-card {
+            background-color: #ffffff;
+            border: 4px dashed #7dd3fc; 
+            border-radius: 20px;
+            padding: 25px;
+            width: 400px;
+            
+            box-shadow: 0 4px 12px rgba(3, 105, 161, 0.1); 
+        }
+
+        .math-card h3 {
+            color: #0369a1;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px 5px;
+            color: #0c4a6e;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 12px;
+            border: 3px solid #93c5fd;
+            border-radius: 15px;
+            font-size: 18px;
+            outline: none;
+            background-color: #f8fafc;
+            text-align: center;
+            color: #0369a1;
+            font-weight: bold;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        input[type="text"]:focus {
+            background-color: #ffffff;
+            border-color: #38bdf8;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        input[type="button"] {
+            flex: 1;
+            padding: 10px 0;
+            background-color: #38bdf8;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: "Times New Roman", Times, serif;
+       
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        input[type="button"]:hover {
+            background-color: #7dd3fc;
+        }
+
+        input[type="button"]:active {
+            
+            transform: scale(0.95);
+        }
+
+        #ketqua {
+            margin: 0;
+            font-weight: bold;
+            color: #db2777;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="math-card">
+    <h3>🐟 Các phép toán cơ bản! 🐟</h3>
+    <table border="0">
+        <tbody>
+            <tr>
+                <td>Nhập số thứ 1</td>
+                <td><input type="text" id="txtsol1" placeholder="0"></td>
+            </tr>
+            <tr>
+                <td>Nhập số thứ 2</td>
+                <td><input type="text" id="txtso2" placeholder="0"></td>
+            </tr>
+            <tr>
+                <td>Phép toán</td>
+                <td>
+                    <div class="btn-group">
+                        <input type="button" name="cong" id="cong" value="+">
+                        <input type="button" name="tru" id="ru" value="-">
+                        <input type="button" name="nhan" id="nhan" value="x">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Kết quả là:</td>
+                <td><p id="ketqua">?</p></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    var theKetQua = document.getElementById("ketqua");
+
+    // Phép Cộng (+)
+    document.getElementById("cong").onclick = function() {
+        var so1 = Number(document.getElementById("txtsol1").value);
+        var so2 = Number(document.getElementById("txtso2").value);
+        theKetQua.innerHTML = so1 + so2;
+    };
+
+    // Phép Trừ (-)
+    document.getElementById("ru").onclick = function() {
+        var so1 = Number(document.getElementById("txtsol1").value);
+        var so2 = Number(document.getElementById("txtso2").value);
+        theKetQua.innerHTML = " " + (so1 - so2);
+    };
+
+    // Phép Nhân (x)
+    document.getElementById("nhan").onclick = function() {
+        var so1 = Number(document.getElementById("txtsol1").value);
+        var so2 = Number(document.getElementById("txtso2").value);
+        theKetQua.innerHTML = so1 * so2;
+    };
+
+   
+</script>
+
+</body>
+</html>
